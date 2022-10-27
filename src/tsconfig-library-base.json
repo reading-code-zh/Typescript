@@ -5,6 +5,7 @@
         "composite": false,
         "incremental":  true,
         "declaration": true,
-        "stripInternal":  true
+        "stripInternal":  true,
+        "sourceMap": true
     }
 }
