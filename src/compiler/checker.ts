@@ -1164,6 +1164,8 @@ namespace ts {
         function getEmitResolver(sourceFile: SourceFile, cancellationToken: CancellationToken) {
             // Ensure we have all the type information in place for this file so that all the
             // emitter questions of this resolver will return the right information.
+            //确保我们有该文件的所有类型信息，以便
+            //这个解析器将返回正确的信息。
             getDiagnostics(sourceFile, cancellationToken);
             return emitResolver;
         }
@@ -14946,6 +14948,7 @@ namespace ts {
         // circularly reference themselves and therefore cannot be subtype reduced during their declaration.
         // For example, "type Item = string | (() => Item" is a named type that circularly references itself.
         function getUnionType(types: readonly Type[], unionReduction: UnionReduction = UnionReduction.Literal, aliasSymbol?: Symbol, aliasTypeArguments?: readonly Type[], origin?: Type): Type {
+            debugger
             if (types.length === 0) {
                 return neverType;
             }

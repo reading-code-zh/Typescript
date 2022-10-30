@@ -806,6 +806,7 @@ namespace ts {
             host,
             configFileParsingDiagnostics: getConfigFileParsingDiagnostics(config)
         };
+        // 创建命令
         const program = createProgram(programOptions);
         const exitStatus = emitFilesAndReportErrorsAndGetExitStatus(
             program,
